@@ -1,0 +1,4 @@
+interface:
+  display_name: "網頁 3D 遊戲場景製作"
+  short_description: "分步選擇網頁 3D 遊戲場景與風格，提供技術難度和製作建議"
+  default_prompt: "請用 $build-web-3d-game-scene 從應用類型開始引導我設計關卡，並推薦適合的美術風格。"

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Foundry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game">
+    <canvas id="viewport"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="panel health-panel">
+        <span class="label">生命</span>
+        <strong id="health">100</strong>
+        <div class="bar"><div id="health-bar"></div></div>
+      </div>
+
+      <div class="panel mission-panel">
+        <span class="label">任務進度</span>
+        <strong id="score">0 / 5</strong>
+      </div>
+
+      <div class="panel ammo-panel">
+        <span id="ammo">12</span>
+        <span class="ammo-divider">/</span>
+        <span id="reserve">48</span>
+      </div>
+
+      <div id="crosshair"><span></span><span></span></div>
+      <div id="message"></div>
+    </div>
+
+    <div id="start-screen" class="overlay">
+      <div class="menu-card">
+        <div class="eyebrow">FOUNDry // SECTOR 07</div>
+        <h1>NEON<br><em>FOUNDRY</em></h1>
+        <p>清除倉庫中的機械守衛，奪回失控核心。</p>
+        <button id="start-button" type="button">開始任務</button>
+        <div class="controls">
+          <span><b>WASD</b> 移動</span>
+          <span><b>滑鼠</b> 瞄準</span>
+          <span><b>點擊</b> 射擊</span>
+          <span><b>R</b> 裝填</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="end-screen" class="overlay hidden">
+      <div class="menu-card">
+        <div id="end-eyebrow" class="eyebrow">MISSION RESULT</div>
+        <h2 id="end-title">任務完成</h2>
+        <p id="end-detail"></p>
+        <button id="restart-button" type="button">重新開始</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
